@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="input">
+            <h2>Grading System</h2>
+            <form action="">
+                <label for="english">English</label>
+                <input type="number" required id="english"> <br></br>
+
+                <label for="math">math</label>
+                <input type="number" required id="math"> <br><br>
+
+                <label for="physics">physics</label>
+                <input type="number" required id="physics"> <br><br>
+
+                <label for="computer">computer</label>
+                <input type="number" required id="computer"> <br><br>
+
+                <label for="science">science</label>
+                <input type="number" required id="science"> <br><br>
+
+
+                <label for="averagemarks">averageMarks</label>
+                <input type="number" required id="averagemarks"> <br><br><br>
+
+
+                <button onclick="total(event)">Total</button> <button onclick="average(event)">Average</button>
+                <button onclick="grade(event)">Grade</button>
+
+
+
+            </form>
+        </div>
+
+        <div class="output">
+            <div class="result">
+                <h2>TOTAL</h2>
+                <p class="total">
+
+                </p>
+            </div>
+
+            <hr>
+
+            <div class="result">
+                <h2>AVERAGE</h2>
+                <p class="average"></p>
+            </div>
+
+            <hr>
+
+            <div class="result">
+                <h2>GRADE</h2>
+                <p class="grade"></p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function total(event) {
+            let english = Number(document.querySelector("#english").value);
+            let math = Number(document.querySelector("#math").value);
+            let physics = Number(document.querySelector("#physics").value);
+            let computer = Number(document.querySelector("#computer").value);
+            let science = Number(document.querySelector("#science").value);
+
+
+
+            event.preventDefault();
+
+            let result = english + math + physics + computer + science;
+
+            let target = document.querySelector(".total").innerHTML = result;
+
+
+        }
+
+        function average(event) {
+            let english = Number(document.querySelector("#english").value);
+            let math = Number(document.querySelector("#math").value);
+            let physics = Number(document.querySelector("#physics").value);
+            let computer = Number(document.querySelector("#computer").value);
+            let science = Number(document.querySelector("#science").value);
+
+
+
+            event.preventDefault();
+
+            let result = (english + math + physics + computer + science) / 5;
+
+            let target = document.querySelector(".average").innerHTML = result;
+
+
+        }
+
+        function grade(event) {
+            let averagemarks = document.querySelector("#averagemarks").value;
+
+            event.preventDefault();
+
+            if (averagemarks > 80) {
+                document.querySelector(".grade").innerHTML = "A1-Grade";
+            }
+
+            else if (averagemarks > 70) {
+                document.querySelector(".grade").innerHTML = "A-Grade";
+
+
+            }
+
+            else if (averagemarks > 60) {
+                document.querySelector(".grade").innerHTML = "B-Grade";
+
+            }
+
+            else if (averagemarks > 40) {
+                document.querySelector(".grade").innerHTML = "pass"
+            }
+
+            else {
+                document.querySelector(".grade").innerHTML = "fail"
+            }
+        }
+
+
+    </script>
+
+</body>
+
+
+
+</html>

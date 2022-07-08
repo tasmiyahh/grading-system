@@ -1,0 +1,97 @@
+.main {
+    display: flex;
+    flex-direction: row;
+
+    margin: 20px auto;
+    width: 70%;
+    box-sizing: border-box;
+
+}
+
+.input {
+    border: 2px solid white;
+    margin: 10px 10px;
+    padding: 2px;
+    background-color: white;
+    width: 60%;
+    border-radius: 20px 0;
+    text-transform: capitalize;
+}
+
+.output {
+    border: 2px solid white;
+    margin: 10px 10px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: white;
+    width: 40%;
+    border-radius: 20px 0;
+    text-transform: capitalize;
+}
+
+.input:hover{
+    border-radius: 0 20px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.output:hover{
+    border-radius: 0 20px;
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+button:hover{
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px black;
+    font-weight: bold;
+}
+
+.result {
+    height: 80px;
+
+}
+
+label {
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+h2 {
+    background-color: black;
+    color: white;
+    padding: 0;
+    text-align: center;
+}
+
+button {
+    margin: 10px;
+    font-size: large;
+    background-color: #B19277;
+    border-radius: 3px;
+}
+
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        width: 100%;
+        margin: 5px;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+
+    .output,
+    .input {
+        width: 100%;
+        margin: 5px;
+    }
+
+    button{
+        display: block;
+    }
+}
